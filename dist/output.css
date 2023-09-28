@@ -575,12 +575,28 @@ video {
   width: 25%;
 }
 
-.w-2\/4 {
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-1\/2 {
   width: 50%;
 }
 
-.w-6 {
-  width: 1.5rem;
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .max-w-md {
@@ -607,8 +623,20 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -619,12 +647,21 @@ video {
   gap: 1.25rem;
 }
 
+.self-center {
+  align-self: center;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.bg-cyan-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 51 68 / var(--tw-bg-opacity));
 }
 
 .bg-sky-950\/80 {
@@ -638,6 +675,11 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
 .stroke-yellow-300 {
@@ -673,6 +715,10 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -696,6 +742,16 @@ video {
   line-height: 1.75rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -716,14 +772,24 @@ video {
   text-transform: capitalize;
 }
 
-.text-slate-900 {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-cyan-950 {
+  --tw-text-opacity: 1;
+  color: rgb(8 51 68 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -778,7 +844,6 @@ body {
 }
 
 .hero {
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   min-height: 77vh;
 }
 
@@ -788,6 +853,10 @@ section.hero .h-95 {
 
 .hover\:rounded-lg:hover {
   border-radius: 0.5rem;
+}
+
+.hover\:rounded-none:hover {
+  border-radius: 0px;
 }
 
 .hover\:border-solid:hover {
@@ -802,6 +871,11 @@ section.hero .h-95 {
 .hover\:bg-slate-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:font-black:hover {
