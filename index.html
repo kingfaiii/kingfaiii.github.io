@@ -9,28 +9,30 @@
   </head>
 
   <body class="bg-cyan-950 scroll-smooth">
-    <nav class="bg-transparent">
-      <div class="flex justify-between content-center py-5 px-8 m-auto max-w-screen-2xl items-center">
-        <div class="text-white font-bold text-4xl my-3">KING</div>
-        <div class="menus text-xl">
-          <ul class="list-none flex justify-evenly no-underline text-white my-3 items-center">
-            <li>
-              <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#home">Home</a>
-            </li>
-            <li>
-              <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#services">Services</a>
-            </li>
-            <li>
-              <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#skills">Skills</a>
-            </li>
-            <li>
-              <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#portfolio">Portfolio</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="bg-transparent">
+        <div class="flex justify-between content-center py-5 px-8 m-auto max-w-screen-2xl items-center">
+          <div class="text-white font-bold text-4xl my-3">KING</div>
+          <div class="menus text-xl">
+            <ul class="list-none flex justify-evenly no-underline text-white my-3 items-center">
+              <li>
+                <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#home">Home</a>
+              </li>
+              <li>
+                <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#services">Services</a>
+              </li>
+              <li>
+                <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#skills">Skills</a>
+              </li>
+              <li>
+                <a class="hover:bg-teal-300 hover:text-black hover:font-black py-2 px-5 mx-1 hover:border-solid transition-all duration-300 hover:rounded-lg" href="#portfolio">Portfolio</a>
+              </li>
+            </ul>
+          </div>
+          <a class="hover:bg-white text-xl hover:rounded-none hover:font-black py-2 px-5 mx-1 transition-all duration-300 rounded-lg bg-teal-300 text-black" href="#contact">Contact</a>
         </div>
-        <a class="hover:bg-white text-xl hover:rounded-none hover:font-black py-2 px-5 mx-1 transition-all duration-300 rounded-lg bg-teal-300 text-black" href="#contact">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <section id="home">
       <div class="flex hero justify-around m-auto align-middle flex-wrap content-center h-95 max-w-screen-2xl">
@@ -52,63 +54,81 @@
     <section id="services" class="py-16">
       <div class="max-w-screen-2xl m-auto text-center">
         <h2 class="text-6xl font-semibold text-white pb-8">SERVICES</h2>
-        <div class="flex justify-around m-auto fkex-wrap content-center pb-8">
+        <div class="flex justify-around m-auto content-center pb-8">
           <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
             <div class="content">
-            <img class="w-20" src="./Assets/images/seo-optimization-svgrepo-com.png" alt="SEO" />
-            <div>
-              <h3 class="text-3xl font-semibold">SEO</h3>
-              <p class="text-xl">Unlock your website's full potential with expert SEO services. Elevate rankings, drive traffic, and grow your business online!</p>
+              <img class="w-20" src="./Assets/images/seo-optimization-svgrepo-com.png" alt="SEO" />
+              <div>
+                <h3 class="text-3xl font-semibold">SEO</h3>
+                <p class="text-xl">Unlock your website's full potential with expert SEO services. Elevate rankings, drive traffic, and grow your business online!</p>
+              </div>
             </div>
-          </div>
-          </div>
-          <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
-            <div class="content">
-            <img class="w-20" src="./Assets/images/shopify-svgrepo-com.png" alt="E-Commerce" />
-            <div>
-              <h3 class="text-3xl font-semibold">E-Commerce</h3>
-              <p class="text-xl">Maximize e-commerce success! Leverage my expertise to boost sales, optimize user experience, and scale your online store.</p>
-            </div>
-          </div>
           </div>
           <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
             <div class="content">
-            <img class="w-20" src="./Assets/images/web-development-svgrepo-com.png" alt="Web Development" />
-            <div>
-              <h3 class="text-3xl font-semibold">Web Development</h3>
-              <p class="text-xl">Crafting digital excellence! Elevate your web presence with my top-tier web development skills. Let's build your online vision.</p>
+              <img class="w-20" src="./Assets/images/shopify-svgrepo-com.png" alt="E-Commerce" />
+              <div>
+                <h3 class="text-3xl font-semibold">E-Commerce</h3>
+                <p class="text-xl">Maximize e-commerce success! Leverage my expertise to boost sales, optimize user experience, and scale your online store.</p>
+              </div>
             </div>
           </div>
+          <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
+            <div class="content">
+              <img class="w-20" src="./Assets/images/web-development-svgrepo-com.png" alt="Web Development" />
+              <div>
+                <h3 class="text-3xl font-semibold">Web Development</h3>
+                <p class="text-xl">Crafting digital excellence! Elevate your web presence with my top-tier web development skills. Let's build your online vision.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="flex justify-around m-auto fkex-wrap content-center pb-8">
+        <div class="flex justify-around m-auto content-center pb-8">
           <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
             <div class="content">
-            <img class="w-20" src="./Assets/images/performance-graph-svgrepo-com.png" alt="Performance Optimization" />
-            <div>
-              <h3 class="text-3xl font-semibold">Performance Optimization</h3>
-              <p class="text-xl">Unlock lightning-fast website speed! Elevate your online presence with expert performance optimization services.</p>
+              <img class="w-20" src="./Assets/images/performance-graph-svgrepo-com.png" alt="Performance Optimization" />
+              <div>
+                <h3 class="text-3xl font-semibold">Performance Optimization</h3>
+                <p class="text-xl">Unlock lightning-fast website speed! Elevate your online presence with expert performance optimization services.</p>
+              </div>
             </div>
-          </div>
-          </div>
-          <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
-            <div class="content">
-            <img class="w-20" src="./Assets/images/security-svgrepo-com.png" alt="Security Enhancement" />
-            <div>
-              <h3 class="text-3xl font-semibold">Security Enhancement</h3>
-              <p class="text-xl">Fortify your online fortress! Bolster website security with my expert enhancements for a safer digital experience.</p>
-            </div>
-          </div>
           </div>
           <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
             <div class="content">
-            <img class="w-20" src="./Assets/images/mobile-svgrepo-com.png" alt="Mobile Optimization" />
-            <div>
-              <h3 class="text-3xl font-semibold">Mobile Optimization</h3>
-              <p class="text-xl">Enhance mobile experience! Elevate your site's performance on all devices with my expert mobile optimization services.</p>
+              <img class="w-20" src="./Assets/images/security-svgrepo-com.png" alt="Security Enhancement" />
+              <div>
+                <h3 class="text-3xl font-semibold">Security Enhancement</h3>
+                <p class="text-xl">Fortify your online fortress! Bolster website security with my expert enhancements for a safer digital experience.</p>
+              </div>
             </div>
           </div>
+          <div class="card relative cursor-pointer gap-3 p-8 mx-3 bg-transparent flex justify-center items-center hover:shadow-none text-left text-white rounded-xl overflow-hidden">
+            <div class="content">
+              <img class="w-20" src="./Assets/images/mobile-svgrepo-com.png" alt="Mobile Optimization" />
+              <div>
+                <h3 class="text-3xl font-semibold">Mobile Optimization</h3>
+                <p class="text-xl">Enhance mobile experience! Elevate your site's performance on all devices with my expert mobile optimization services.</p>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-16">
+      <div class="max-w-screen-2xl m-auto text-center">
+        <h2 class="text-3xl font-semibold text-white pb-8">I have experience with these technologies</h2>
+        <div class="grid grid-cols-5 gap-2">
+          <div class="p-4"><img class="w-36" src="./Assets/images/html5-svgrepo-com.png" alt="HTML5" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/css3-svgrepo-com.png" alt="CSS3" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/javascript-svgrepo-com.png" alt="JAVASCRIPT" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/php-svgrepo-com.png" alt="PHP" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/wordpress-color-svgrepo-com.png" alt="WORDPRESS" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/shopify-skills-svgrepo-com.png" alt="SHOPIFY" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/laravel-svgrepo-com.png" alt="LARAVEL" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/mysql-logo-svgrepo-com.png" alt="MYSQL" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/cpanel-svgrepo-com.png" alt="CPANEL" /></div>
+          <div class="p-4"><img class="w-36" src="./Assets/images/jquery-svgrepo-com.png" alt="JQUERY" /></div>
         </div>
       </div>
     </section>
