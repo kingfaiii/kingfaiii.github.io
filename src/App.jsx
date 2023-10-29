@@ -35,10 +35,10 @@ const App = () => {
   return (
     <section className="root">
       <div className="content">
-      <h1>KING FAI AARON.</h1>
+      <h1>KING FAI <span>AARON</span></h1>
       <div className="card">
         <p>Web Developer | Zambales, Philippines</p>
-        <p>Im Experienced Web Developer with a demonstrated history of working in the information technology and services industry. Highly skilled in CMS(WordPress)</p>
+        <p>I am a seasoned web developer with a proven track record in the information technology and services sector, boasting a high level of expertise in content management systems, particularly WordPress.</p>
       </div>
       </div>
       <MyApp />
