@@ -1,4 +1,4 @@
-import reactLogo from "./assets/Me.jpg";
+import reactLogo from "./assets/me_v1.png";
 import "./App.css";
 import PropTypes from "prop-types";
 

@@ -1,25 +1,28 @@
 .root {
   height: 100vh;
   display: flex;
-  background: #fff url(./assets/Frame4.jpg) no-repeat center/cover;  
+  background: #fff url(./assets/Frame4.jpg) no-repeat center/cover;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
 }
-.content{
+.content {
   width: 50%;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-end;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
 }
 .flex {
   display: flex;
-    width: 50%;
-    margin: auto;
-    justify-content: center;
+  width: auto;
+  height: 500px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 27% 73% 31% 69% / 67% 36% 64% 33% ;
+  overflow: hidden;
 }
 span {
   color: var(--accent-2);
@@ -32,10 +35,9 @@ span {
   color: #000;
 }
 .logo {
-  height: 27em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  width: 100%; /* Make sure the image fills the container */
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container without stretching */
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
