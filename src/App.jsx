@@ -1,5 +1,4 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import reactLogo from "./assets/Me.jpg";
 import "./App.css";
 import PropTypes from "prop-types";
 
@@ -26,8 +25,7 @@ ImageLink.defaultProps = {
 const MyApp = () => {
   return (
     <div className="flex">
-      <ImageLink link="https://vitejs.dev" target="_blank" imagesrc={viteLogo} alt="Vite logo" classname="logo" />
-      <ImageLink link="https://react.dev" target="_blank" imagesrc={reactLogo} alt="React logo" classname="logo react" />
+      <ImageLink link="https://vitejs.dev" target="_blank" imagesrc={reactLogo} alt="Vite logo" classname="logo" />
     </div>
   );
 };
