@@ -1,4 +1,5 @@
-const Card = () => {
+import PropTypes from 'prop-types';
+const Card = ({ cardContent }) => {
   return (
     <div className="card-portfolio">
       <div className="tools">
@@ -12,18 +13,12 @@ const Card = () => {
           <span className="green box"></span>
         </div>
       </div>
-      <div className="card__content"></div>
+      <div className="card__content">{cardContent()}</div>
     </div>
   );
 };
-const Portfolio = () => {
-  return (
-    <section className="Portfolio">
-      <p>My Works</p>
-      <h2>Portfolio</h2>
-      <Card />
-    </section>
-  );
-};
 
-export default Portfolio;
+Card.propTypes = {
+  cardContent: PropTypes.func.isRequired,
+};
+export default Card;
