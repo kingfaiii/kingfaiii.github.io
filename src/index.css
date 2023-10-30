@@ -19,7 +19,9 @@
   --accent-3: #CCDED5;
 
 }
-
+*{
+  margin: 0;
+}
 a {
   font-weight: 500;
   color: #646cff;

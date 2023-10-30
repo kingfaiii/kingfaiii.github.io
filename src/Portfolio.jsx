@@ -1,9 +1,29 @@
-const Portfolio = () =>{
-    return(
-        <div className="Portfolio">
-        <h2>Portfolio</h2>
+const Card = () => {
+  return (
+    <div className="card-portfolio">
+      <div className="tools">
+        <div className="circle">
+          <span className="red box"></span>
         </div>
-    );
+        <div className="circle">
+          <span className="yellow box"></span>
+        </div>
+        <div className="circle">
+          <span className="green box"></span>
+        </div>
+      </div>
+      <div className="card__content"></div>
+    </div>
+  );
+};
+const Portfolio = () => {
+  return (
+    <section className="Portfolio">
+      <p>My Works</p>
+      <h2>Portfolio</h2>
+      <Card />
+    </section>
+  );
 };
 
 export default Portfolio;

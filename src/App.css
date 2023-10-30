@@ -39,18 +39,6 @@ span {
   height: 100%;
   object-fit: cover; /* Ensure the image covers the container without stretching */
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -58,6 +46,60 @@ span {
   }
 }
 
-.read-the-docs {
-  color: #888;
+/* Portfolio Section */
+.Portfolio{
+  height: 100vh;
+  background: #fff url(./assets/Portfolio-section.png) no-repeat center/cover;
+  text-align: center;
+
 }
+.Portfolio p{
+  font-size: 2em;
+  opacity: .5;
+  color:#000;
+  padding-top: 2em;
+}
+.Portfolio h2{
+  font-size: 8em;
+  line-height: .8em;
+}
+.card-portfolio {
+  width: 350px;
+  height: 450px;
+  margin: 50px auto 0;
+  background-color: var(--accent-3);
+  border-radius: 8px;
+  z-index: 1;
+ }
+ 
+ .tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+ }
+ 
+ .circle {
+  padding: 0 4px;
+ }
+ 
+ .box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+ }
+ 
+ .red {
+  background-color: #ff605c;
+ }
+ 
+ .yellow {
+  background-color: #ffbd44;
+ }
+ 
+ .green {
+  background-color: #00ca4e;
+ }
+ 
