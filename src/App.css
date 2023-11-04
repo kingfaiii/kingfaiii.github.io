@@ -1,10 +1,67 @@
+@keyframes floating {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+
+  25% {
+    transform: translateX(20px) translateY(20px);
+  }
+
+  50% {
+    transform: translateX(0px) translateY(0px);
+  }
+
+  75% {
+    transform: translateX(-20px) translateY(-20px);
+  }
+
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.circleRadiant {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--accent-3);
+  position: absolute;
+  filter: blur(15px);
+  animation: floating 10s infinite linear;
+  z-index: 1;
+}
+#bottom {
+  background-color: var(--accent-2);
+  top: 60%;
+  left: 40%;
+  width: 300px;
+  height: 300px;
+  animation-delay: 4s;
+}
+
+#right {
+  background-color: var(--primary);
+  top: 40%;
+  left: 91%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 2s;
+}
 .root {
   height: 100vh;
   display: flex;
-  background: #fff url(./assets/Frame4.jpg) no-repeat center/cover;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 .content {
   width: 50%;
@@ -13,16 +70,28 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-end;
+  z-index: 2;
 }
 .flex {
   display: flex;
-  width: auto;
+  width: 50%;
   height: 500px;
   margin: auto;
   justify-content: center;
   align-items: center;
-  border-radius: 27% 73% 31% 69% / 67% 36% 64% 33% ;
   overflow: hidden;
+  z-index: 2;
+}
+.flex:after{
+  content: "";
+  position: absolute;
+  bottom: 142px;
+  left: 61%;
+  background: rgba(80,80,80,.503);
+  width: 25rem;
+  height: 50px;
+  border-radius: 50%;
+  filter: blur(20px);
 }
 span {
   color: var(--accent-2);
@@ -35,11 +104,21 @@ span {
   color: #000;
 }
 .logo {
-  width: 100%; /* Make sure the image fills the container */
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container without stretching */
+  width: 303px;
+  height: 451px;
+  clip-path: polygon(25% 0%, 78% 0, 53% 100%, 0 100%);
+  object-fit: cover;
+}
+.flex a {
+  margin: -67px;
+}
+.flex a:first-child .logo {
+  height: 429px;
 }
 
+.flex a:last-child .logo {
+  height: 429px;
+}
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -47,59 +126,57 @@ span {
 }
 
 /* Portfolio Section */
-.Portfolio{
+.Portfolio {
   height: 100vh;
-  background: #fff url(./assets/Portfolio-section.png) no-repeat center/cover;
   text-align: center;
-
 }
-.Portfolio p{
+.Portfolio p {
   font-size: 2em;
-  opacity: .5;
-  color:#000;
+  opacity: 0.5;
+  color: #000;
   padding-top: 2em;
 }
-.Portfolio h2{
+.Portfolio h2 {
   font-size: 8em;
-  line-height: .8em;
+  line-height: 0.8em;
 }
 .card-portfolio {
   width: 350px;
   height: 450px;
   margin: 50px auto 0;
-  background-color: var(--accent-3);
-  border-radius: 8px;
   z-index: 1;
- }
- 
- .tools {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 29px 29px 57px #fcfcfc, -29px -29px 57px #ffffff;
+}
+
+.tools {
   display: flex;
   align-items: center;
   padding: 9px;
- }
- 
- .circle {
+}
+
+.circle {
   padding: 0 4px;
- }
- 
- .box {
+}
+
+.box {
   display: inline-block;
   align-items: center;
   width: 10px;
   height: 10px;
   padding: 1px;
   border-radius: 50%;
- }
- 
- .red {
+}
+
+.red {
   background-color: #ff605c;
- }
- 
- .yellow {
+}
+
+.yellow {
   background-color: #ffbd44;
- }
- 
- .green {
+}
+
+.green {
   background-color: #00ca4e;
- }
- 
+}
