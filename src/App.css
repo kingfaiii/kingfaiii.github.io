@@ -268,3 +268,36 @@ section {
 .cta:hover span {
   color: #fff;
 }
+@media (max-width: 768px) {
+  .flex {
+    display:none
+  }
+  .flex a {
+    margin: 10px;
+  }
+  .card {
+    width: 90%;
+  }
+  .content{
+    width: 100%;
+    padding: 20px;
+  }
+  .content h1{
+    font-size:4em;
+  }
+  .circle,#right,#bottom,#top,#left{
+    display:none;
+  }
+  .root{
+    height: 80vh;
+  }
+  .card-portfolio {
+    width: 98vw !important;
+}
+  .slick-track{
+    display:flex !important;
+  }
+  .slick-slide{
+    margin:0;
+  }
+}

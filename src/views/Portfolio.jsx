@@ -12,9 +12,28 @@ const settings = {
   infinite: false,
   speed: 500,
   slidesToShow:1,
-  slidesToScroll: 2,
+  slidesToScroll: 1,
   centerMode:true,
   variableWidth:true,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+  centerMode:true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1
+      }
+    }
+  ]
 };
 
 const FirstImageData = ({ mydata }) => {
