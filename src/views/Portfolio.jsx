@@ -1,24 +1,52 @@
-import Button from "../components/Button";
-import Card from "../components/Card.jsx";
-import { data } from "../utils/PortfolioData";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import Button from '../components/Button';
+import { data } from '../utils/PortfolioData';
+import Card from '../components/Card'; 
+import PropTypes from 'prop-types';
 
-const firstImageData = () => {
-  const { imageSrc, title, link } = data[0];
+const settings = {
+  dots: true,
+  arrows:false,
+  infinite: false,
+  speed: 500,
+  slidesToShow:1,
+  slidesToScroll: 2,
+  centerMode:true,
+  variableWidth:true,
+};
+
+const FirstImageData = ({ mydata }) => {
   return (
     <div>
-      <img src={imageSrc} alt={title} width="100%"/>
-      <h3>{title}</h3>
-      <Button link={link} target="_blank" btnValue="Visit Me" />
+      <a href={mydata.link} target="_blank" rel="noreferrer">
+      <img src={mydata.imageSrc} alt={mydata.title} width="100%" />
+      </a>
+      <h3>{mydata.title}</h3>
+      <Button link={mydata.link} target="_blank" btnValue="Visit Me" />
     </div>
   );
 };
-
+FirstImageData.propTypes = {
+  mydata: PropTypes.shape({
+    imageSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+  }).isRequired,
+};
 const Portfolio = () => {
   return (
     <section className="Portfolio">
       <p>My Works</p>
       <h2>Portfolio</h2>
-      <Card cardContent={firstImageData} />
+      <Slider {...settings}>
+      {(data || []).map(item => (
+          <div key={item.id}>
+            <Card cardContent={<FirstImageData mydata={item} />} />
+          </div>
+        ))}
+      </Slider>
     </section>
   );
 };

@@ -13,7 +13,7 @@ const Card = ({ cardContent }) => {
           <span className="green box"></span>
         </div>
       </div>
-      <div className="card__content">{cardContent()}</div>
+      <div className="card__content">{cardContent}</div>
     </div>
   );
 };

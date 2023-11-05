@@ -1,3 +1,25 @@
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #2E3A87 #D3D3D3;
+}
+
+/* Define scrollbar width, color, and track color */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #1C2457;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #D3D3D3;
+  border-radius: 10px;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
