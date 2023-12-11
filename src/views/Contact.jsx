@@ -10,13 +10,13 @@ const Contact = () => {
         <p className="font-semibold opacity-75 text-4xl">Get in touch, let&apos;s talk.</p>
         <p className="mt-5 text-xl opacity-75">Feel free to connect with me:</p>
         <div className="mt-3 flex gap-4">
-          <a href="#">
+          <a href="https://wa.me/639062118931" target="_blank" rel="noreferrer">
             <img className="w-7" src={WhatsApp} alt="WhatsApp" />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/king-fai-aaron-sit-15b677211/" target="_blank" rel="noreferrer">
             <img className="w-7" src={LinkedIn} alt="LinkedIn" />
           </a>
-          <a href="#">
+          <a href="mailto:kfasit1016@gmail.com">
             <img className="w-7" src={Gmail} alt="Gmail" />
           </a>
         </div>
