@@ -9,7 +9,7 @@ const defaultSliderSettings = getSliderSettings();
 const Portfolio = () => {
   return (
     <section className="max-w-7xl m-auto h-90vh flex flex-col justify-evenly">
-      <h2 className="text-white text-6xl mb-5">Projects<span className="text-custom">.</span></h2>
+      <h2 className="text-white text-7xl mb-5">Projects<span className="text-custom">.</span></h2>
       <Slider {...defaultSliderSettings}>
         {data.map((projects) => {
           return (

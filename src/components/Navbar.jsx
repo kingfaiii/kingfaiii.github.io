@@ -14,16 +14,16 @@ const Navbar = () => {
           Home
         </Link>
         <Link to="/about" className={linkStyle}>
-          About Me
+          About
         </Link>
         <Link to="/projects" className={linkStyle}>
           Projects
         </Link>
-        <Link to="/skills" className={linkStyle}>
-          Skills
-        </Link>
         <Link to="/experience" className={linkStyle}>
           Experience
+        </Link>
+        <Link to="/contact" className={linkStyle}>
+          Contact
         </Link>
       </div>
     </nav>
