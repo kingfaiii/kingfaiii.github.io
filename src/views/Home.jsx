@@ -1,16 +1,17 @@
 import Button from "../components/Button";
 import Robot from "../assets/robot.png";
+import CV from "../assets/King_Fai_Aaron_Sit_CV.pdf";
 const Home = () => {
   return (
-    <div className="flex h-90vh items-center max-w-7xl m-auto px-11">
-      <div className="w-1/2">
-        <p className="text-xl text-custom">Front End Developer</p>
-        <h1 className="text-7xl font-normal mb-5 text-white">King Fai Aaron Sit</h1>
-        <p className="text-white opacity-70 text-sm">I am a seasoned web developer with a proven track record in the information technology and services sector, boasting a high level of expertise in content management systems, particularly WordPress.</p>
-        <Button content="Download CV" />
+    <div className="flex flex-col md:flex-row md:h-90vh h-[auto] justify-center items-center mt-11 md:mt-auto md:max-w-7xl w-full m-auto md:px-11 px-4">
+      <div className="lg:w-1/2">
+        <p className="md:text-xl text-sm text-custom">Front End Developer</p>
+        <h1 className="lg:text-7xl md:text-6xl text-4xl font-normal md:mb-5 mb-2 text-white">King Fai Aaron Sit</h1>
+        <p className="text-white opacity-70 text-sm mb-7">As a Front-End Developer, I bring a diverse set of skills to the table, ensuring that every project I undertake is executed with precision and creativity. My proficiency extends across various technologies and methodologies, making me a versatile and effective developer.</p>
+        <Button link={CV} content="Download CV" />
       </div>
-      <div className="w-1/2 container-glow flex justify-end">
-        <img className="bounce w-3/4" src={Robot} />
+      <div className="lg:w-1/2 container-glow md:flex hidden justify-end">
+        <img className="bounce md:w-3/4 w-full" src={Robot} />
       </div>
     </div>
   );
