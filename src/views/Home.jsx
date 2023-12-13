@@ -3,7 +3,7 @@ import Robot from "../assets/robot.png";
 import CV from "../assets/King_Fai_Aaron_Sit_CV.pdf";
 const Home = () => {
   return (
-    <div className="flex flex-col md:flex-row md:h-90vh h-[auto] justify-center items-center mt-11 md:mt-auto md:max-w-7xl w-full m-auto md:px-11 px-4">
+    <div className="flex flex-col md:flex-row md:h-90vh h-[auto] justify-center flex-wrap items-center mt-11 md:mt-auto md:max-w-7xl w-full m-auto md:px-11 px-4">
       <div className="lg:w-1/2">
         <p className="md:text-xl text-sm text-custom">Front End Developer</p>
         <h1 className="lg:text-7xl md:text-6xl text-4xl font-normal md:mb-5 mb-2 text-white">King Fai Aaron Sit</h1>
