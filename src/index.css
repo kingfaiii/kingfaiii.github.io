@@ -124,12 +124,19 @@ h6 {
     transform: translateY(1);
   }
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (max-width: 767px) {
   .container-glow::before {
-  top: 43rem;
-  width: 26rem;
-  height: 1rem;
-  }
+    animation: Scale 3s ease-in-out infinite;
+    background: rgb(204 249 253 / 50%);
+    border-radius: 50%;
+    content: "";
+    display: block;
+    filter: blur(12px);
+    height: 1rem;
+    position: absolute;
+    top: 42rem;
+    width: 13rem;
+}
 }
 @media only screen and (min-width:1023px){
   .container-glow::before {

@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const linkStyle = "text-white mx-3 hover:opacity-75";
+  const linkStyle = "text-white hover:opacity-75";
   return (
-    <nav className="flex justify-between max-w-7xl m-auto px-11 py-5">
+    <nav className="md:flex block justify-between max-w-7xl m-auto md:px-11 px-4 py-5">
       <div>
         <p className="text-white uppercase font-bold text-2xl">
           King <span className="text-custom">Fai</span>
         </p>
       </div>
-      <div className="items-center flex">
+      <div className="items-center gap-4 flex mt-5 md:mt-0">
         <Link to="/" className={linkStyle}>
           Home
         </Link>
