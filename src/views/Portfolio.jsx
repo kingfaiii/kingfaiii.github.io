@@ -8,17 +8,30 @@ const defaultSliderSettings = getSliderSettings();
 
 const Portfolio = () => {
   return (
-    <section className="max-w-7xl m-auto h-90vh flex flex-col justify-evenly">
-      <h2 className="text-white text-7xl mb-5">Projects<span className="text-custom">.</span></h2>
-      <Slider {...defaultSliderSettings}>
-        {data.map((projects) => {
-          return (
-            <div key={projects.id} className="p-5">
-              <Card {...projects} />
-            </div>
-          );
-        })}
-      </Slider>
+    <section className="md:mt-[200px] mt-10 md:max-w-7xl max-w-2xl m-auto md:px-11 px-4 flex flex-col justify-center">
+      <h2 className="md:text-9xl text-6xl text-white mb-5">
+        Projects<span className="text-custom">.</span>
+      </h2>
+      <div className="md:block hidden">
+        <Slider {...defaultSliderSettings}>
+          {data.map((projects) => {
+            return (
+              <div key={projects.id} className="p-5">
+                <Card {...projects} />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
+      <div className="md:hidden block mb-5">
+      {data.map((projects) => {
+            return (
+              <div key={projects.id} className="p-5">
+                <Card {...projects} />
+              </div>
+            );
+          })}
+      </div>
     </section>
   );
 };

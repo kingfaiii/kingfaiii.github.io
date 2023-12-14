@@ -9,12 +9,11 @@ const getSliderSettings = (additionalSettings = {}) => {
       ...additionalSettings,
       responsive: [
         {
-          breakpoint: 600,
+          breakpoint: 1023,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 1,
-            centerMode: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
           },
         },
         {
