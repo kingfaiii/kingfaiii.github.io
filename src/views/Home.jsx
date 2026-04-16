@@ -90,7 +90,7 @@ const HomePage = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Build Something Great?</h2>
             <p className={`text-xl mb-8 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Let's discuss your project and bring your ideas to life
+              Let`s discuss your project and bring your ideas to life
             </p>
             <motion.button
               className="px-8 py-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-bold text-lg rounded-lg hover:shadow-2xl hover:shadow-sky-500/50 transition-all duration-300"
