@@ -1,62 +1,143 @@
-import Bootstrap from "../assets/bootstrap.png";
-import Laravel from "../assets/laravel.png";
-import MySQL from "../assets/mysql.png";
-import Tailwind from "../assets/tailwind.png";
-import React from "../assets/react.png";
-import WordPress from "../assets/wordpress.png";
-import Shopify from "../assets/shopify.png";
-
-import CardStack from "../components/CardStack";
+import { motion } from 'framer-motion';
+import { useDarkMode } from '../context/DarkModeContext';
+import { GitBranch, Briefcase, Mail } from 'lucide-react';
 
 const About = () => {
-  const cardStyle = "bg-white rounded-xl shadow-md w-[14%] shadow-white md:p-3 p-1";
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <div className="md:mt-[200px] mt-10 md:max-w-7xl max-w-2xl m-auto md:px-11 px-4 flex flex-col justify-center">
-      <h1 className="md:text-9xl text-6xl text-white">About.</h1>
-      <div className="md:ms-12 text-white md:mt-10 mt-5">
-        <p className="font-bold md:text-2xl text-xl md:leading-[110%]">Welcome to my corner of digital universe! I&apos;m King, a passionate Front End Developer with keen eye for creating visually appealing and user-friendly websites.</p>
-      </div>
-      <p className="font-bold md:text-xl text-3xl mt-5 block md:hidden text-white">Tech Stack</p>
-      <div className="md:hidden flex md:gap-10 mt-2 gap-2 justify-center">
-            <CardStack image={Bootstrap} cardStyle={cardStyle}/>
-            <CardStack image={Laravel} cardStyle={cardStyle}/>
-            <CardStack image={MySQL} cardStyle={cardStyle}/>
-            <CardStack image={Tailwind} cardStyle={cardStyle}/>
-            <CardStack image={React} cardStyle={cardStyle}/>
-            <CardStack image={WordPress} cardStyle={cardStyle}/>
-            <CardStack image={Shopify} cardStyle={cardStyle}/>
-          </div>
-      <div className="md:flex block md:mt-14 mt-10 gap-16 text-white leading-[1.75rem]">
-        <div className="md:w-[35%] md:mb-0 mb-5">
-          <p className="font-bold text-xl">Let&apos;s Build Something Amazing:</p>
-          <p className="mt-3 text-justify">Whether you&apos;re looking to revamp your existing website, launch a new project, or dive into the world of e-commerce, I&apos;m here to help. Let&apos;s collaborate and turn your digital dreams into a stunning reality.</p>
+    <div className={`min-h-screen pt-24 pb-16 ${isDarkMode ? 'bg-gray-950 text-white' : 'bg-white text-gray-900'}`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">About Me</h1>
+          <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            Passionate developer crafting elegant solutions to complex problems
+          </p>
+        </motion.div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold mb-6">Who Am I?</h2>
+            <div className={`space-y-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+              <p>
+                I`m a full-stack developer with a passion for creating beautiful, functional web applications. 
+                With 5+ years of experience in web development, I`ve worked with startups and established companies 
+                to bring their digital vision to life.
+              </p>
+              <p>
+                My journey in tech started with a curiosity about how things work. Today, I combine technical expertise 
+                with creative problem-solving to deliver solutions that exceed expectations.
+              </p>
+              <p>
+                When I`m not coding, you`ll find me diving into the latest web technologies, contributing to open-source 
+                projects, or mentoring junior developers.
+              </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 mt-8">
+              {[
+                { label: 'Projects', value: '25+' },
+                { label: 'Clients', value: '15+' },
+                { label: 'Experience', value: '5+ yrs' },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className={`p-4 rounded-lg text-center ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}
+                >
+                  <div className="text-2xl font-bold text-sky-500">{stat.value}</div>
+                  <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Skills Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div
+              className={`p-8 rounded-xl border-2 ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'}`}
+            >
+              <h3 className="text-2xl font-bold mb-6">Core Skills</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  'React & React Native',
+                  'Node.js & Express',
+                  'TypeScript',
+                  'MongoDB & PostgreSQL',
+                  'Tailwind CSS',
+                  'REST APIs',
+                  'GraphQL',
+                  'Docker & AWS',
+                ].map((skill, i) => (
+                  <div
+                    key={i}
+                    className={`p-3 rounded-lg border ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'}`}
+                  >
+                    <span className="text-sm font-medium">{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
-        <div className="md:w-[65%] text-justify">
-          <p className="font-bold text-xl mb-2">Philosophy</p>
-          <p className="mb-6">
-            My approach to development is rooted in a fusion of creativity and functionality. I believe that a website should not only look good but also perform exceptionally well. Every line of code I write is a piece of a larger puzzle, contributing to a digital landscape that is both
-            aesthetically pleasing and highly functional.
+
+        {/* CTA Section */}
+        <motion.div
+          className={`p-8 rounded-xl border-2 text-center ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'}`}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-2xl font-bold mb-6">Let`s Connect</h3>
+          <p className={`mb-8 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            Ready to collaborate or have a question? Reach out!
           </p>
-          <p className="font-bold text-xl mb-2">What I do?</p>
-          <p className="mb-6">
-            Back in 2014 during my college, I started to have interest on Web Development and I created my first potfolio on notepad Learning the basic skills. Before I graduated on college I got an award a Best Thesis and started to Learn and get Certificates on
-            <b> SoloLearn</b>. Fast-forward to today, I&apos;ve had the privillege of building Websites for <b>Digital Marketing Agency,</b> a <b>Huge Corporation</b>.
-          </p>
-          <p className="mb-6">
-            My main focus these days is building projects, creating web application using <b>MERN Stack</b> to showcase my skills. In my free time I&apos;ve also Joined on a community on Discord which is <b>Acdemind</b> which collaborating with another developer to build and to learn with them.
-          </p>
-          <p className="mb-6">When I&apos;m not at the computer, I&apos;m usually taking some rest, planning what will be my next step on my life, hanging out with my Girlfriend or Visiting my siblings on my grandparents.</p>
-          <p className="hidden md:block font-bold text-xl mb-3">Tech Stack</p>
-          <div className="md:flex md:gap-10 hidden gap-2 justify-center mb-5">
-            <CardStack image={Bootstrap} cardStyle={cardStyle}/>
-            <CardStack image={Laravel} cardStyle={cardStyle}/>
-            <CardStack image={MySQL} cardStyle={cardStyle}/>
-            <CardStack image={Tailwind} cardStyle={cardStyle}/>
-            <CardStack image={React} cardStyle={cardStyle}/>
-            <CardStack image={WordPress} cardStyle={cardStyle}/>
-            <CardStack image={Shopify} cardStyle={cardStyle}/>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold rounded-lg flex items-center gap-2"
+            >
+              <Mail className="w-5 h-5" />
+              Email Me
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-3 border-2 font-semibold rounded-lg flex items-center gap-2 ${isDarkMode ? 'border-gray-600 hover:border-sky-500' : 'border-gray-300 hover:border-sky-500'}`}
+            >
+              <GitBranch className="w-5 h-5" />
+              GitHub
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-3 border-2 font-semibold rounded-lg flex items-center gap-2 ${isDarkMode ? 'border-gray-600 hover:border-sky-500' : 'border-gray-300 hover:border-sky-500'}`}
+            >
+              <Briefcase className="w-5 h-5" />
+              LinkedIn
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
